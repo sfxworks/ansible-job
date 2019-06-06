@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ansible-job
+spec:
+  template:
+    spec:
+      containers:
+      - name: ansible-job
+        image: harbor.sfxworks.net/quantomworks/ansible-job
+        command: [""]
+      restartPolicy: Never
+  backoffLimit: 4
+
